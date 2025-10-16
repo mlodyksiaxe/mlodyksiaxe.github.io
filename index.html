@@ -64,6 +64,125 @@ h1{
   max-width:1000px;
 }
 
+/* teraz każda karta to <a> — cały kafel klikalny */
+.card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;
+  padding:22px;
+  text-align:center;
+  transition:.3s;
+  backdrop-filter:blur(6px);
+  box-shadow:0 0 14px rgba(0,0,0,0.4);
+  position:relative;
+  overflow:hidden;
+  text-decoration:none;
+  color:var(--text);
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--neon2);
+  box-shadow:0 0 20px rgba(0,224,255,0.3);
+}
+.card h3{
+  font-family:'Orbitron',sans-serif;
+  font-size:1.2rem;
+  color:var(--neon2);
+  margin-bottom:8px;
+}
+.card p{
+  font-size:0.9rem;
+  opacity:0.8;
+  margin-bottom:14px;
+}
+.card .linktext{
+  color:var(--neon1);
+  font-weight:700;
+  margin-top:8px;
+  display:inline-block;
+}
+.card:hover .linktext{
+  color:var(--neon2);
+}
+
+/* stopka */
+footer{
+  margin-top:60px;
+  opacity:0.5;
+  font-size:0.8rem;
+  z-index:2;
+}
+
+/* delikatne scanlines */
+body::after{
+  content:"";
+  position:fixed;inset:0;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,0.02) 0 2px,transparent 2px 4px);
+  pointer-events:none;
+  mix-blend-mode:overlay;
+}
+</style>
+
+
+:root{
+  --bg:#07090f;
+  --neon1:#ff6b6b;
+  --neon2:#00e0ff;
+  --text:#eaeaea;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:radial-gradient(circle at 40% 30%, #0c111d 0%, #05070c 80%);
+  color:var(--text);
+  font-family:'Roboto Mono', monospace;
+  overflow-x:hidden;
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;
+}
+
+/* gwiazdy */
+canvas#stars{
+  position:fixed;inset:0;z-index:0;
+}
+
+/* nagłówek / tytuł */
+h1{
+  font-family:'Orbitron',sans-serif;
+  font-size:3.2rem;
+  margin-top:90px;
+  background:linear-gradient(90deg,var(--neon1),var(--neon2));
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 20px rgba(255,255,255,0.2);
+  letter-spacing:2px;
+  animation:flicker 4s infinite;
+}
+@keyframes flicker{
+  0%,18%,22%,25%,53%,57%,100%{opacity:1}
+  20%,24%,55%{opacity:.6}
+}
+
+.subtitle{
+  opacity:0.75;
+  font-size:1rem;
+  margin-bottom:50px;
+  letter-spacing:1px;
+}
+
+/* projekty */
+.projects{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+  width:90%;
+  max-width:1000px;
+}
+
 .card{
   background:rgba(255,255,255,0.03);
   border:1px solid rgba(255,255,255,0.06);
@@ -179,4 +298,5 @@ draw();
 </script>
 </body>
 </html>
+
 
