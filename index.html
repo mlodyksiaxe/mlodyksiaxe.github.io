@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>mlodyksiaxe — Strony i Projekty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #141a2e, #080a14);
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: #8a68ff;
+    }
+    .desc {
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 20px;
+      transition: 0.2s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+    }
+    .card a {
+      color: #8a68ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      opacity: 0.6;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>mlodyksiaxe</h1>
+  <div class="desc">Moje strony i projekty hostowane na GitHub Pages</div>
+
+  <div class="projects">
+    <div class="card">
+      <h3>🎰 Kasyno Demo</h3>
+      <p>Slot z fałszywym balansem i animacjami</p>
+      <a href="https://mlodyksiaxe.github.io/kasyno">Otwórz stronę</a>
+    </div>
+
+    <div class="card">
+      <h3>👑 Strona główna mlodyksiaze</h3>
+      <p>Portfolio i informacje o mnie</p>
+      <a href="https://mlodyksiaxe.github.io/mlodyksiaze">Zobacz</a>
+    </div>
+
+    <div class="card">
+      <h3> Miny </h3>
+      <p>Miny jak z kasynka</p>
+      <a href="https://mlodyksiaxe.github.io/miny">Zagraj</a>
+    </div>
+  </div>
+
+  <footer>© 2025 mlodyksiaxe — wszystkie projekty są demo</footer>
+</body>
+</html>
